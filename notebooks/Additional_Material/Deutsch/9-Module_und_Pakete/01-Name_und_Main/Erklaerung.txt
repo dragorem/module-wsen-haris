@@ -1,0 +1,75 @@
+Manchmal ist es wichtig, zu wissen, ob ein Modul importiert oder direkt
+ausgeführt worden ist. In diesem Fall kannst du dies hier verwenden:
+
+      if __name__ == "__main__":
+
+Wenn dein Script direkt in der Kommandozeile vom Python-Interpreter ausgeführt 
+wird mit
+
+    python meinscript.py
+
+dann wird aller Code auf der Einrückungsebene 0 ausgeführt. Funktionen und 
+Klassen in meinscript.py werden dabei nicht ausgeführt. Im Gegensatz zu anderen
+Programmiersprachen gibt es keine eindeutige Funktion main() - aller Code
+auf der ersten Einrückungsebene wird ausgeführt.
+
+In Python kann dies mit der eingebauten Variablen __name__ kontrolliert werden.
+Falls __name__ dem String "__main__" entspricht, wurde das Script direkt
+ausgeführt. Andernfalls entspricht __name__ dem Namen des Modules. Du kannst
+also mit dem folgenden Code feststellen, ob das Script direkt gestartet wurde:
+
+    if __name__ == "__main__":
+        ...
+
+Wenn dieser Ausdruck in einem Script importiert wird, so wird er nicht 
+ausgeführt. Hier ist ein einfaches Beispiel dazu:
+
+    # Datei eins.py
+      def func():
+          """ Beispielfunktion Modulimport """
+
+          print("func() lief in eins.py")
+
+      print("Top-level print innerhalb von eins.py")
+
+      if __name__ == "__main__":
+          print("eins.py wurde direkt ausgefuehrt")
+      else:
+          print("eins.py wurde importiert und dabei ausgefuehrt")
+
+und weiterhin
+
+    # Datei zwei.py
+      import eins
+
+      print("Top-level in zwei.py")
+
+      eins.func()
+
+      if __name__ == "__main__":
+          print("zwei.py wurde direkt ausgefuehrt")
+      else:
+          print("zwei.py wurde importiert und dabei ausgefuehrt")
+
+Wenn du eins.py jetzt direkt ausführst mit
+
+    python eins.py
+
+erfolgt die Ausgabe 
+
+    Top-level print innerhalb von eins.py
+
+eins.py wurde direkt ausgeführt.
+Wenn du statt dessen zwei.py startest:
+
+    python zwei.py
+
+erhältst du
+
+  Top-level print innerhalb von eins.py
+  eins.py wurde importiert und dabei ausgefuehrt
+  Top-level in zwei.py
+  func() lief in eins.py
+  zwei.py wurde direkt ausgefuehrt
+
+Wenn also eins.py importiert wird, ist sein __name__ "eins" und nicht "__main__".

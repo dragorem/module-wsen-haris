@@ -1,40 +1,50 @@
-# hs24
 
-Alle Codes für das HS24
+# Software-Entwicklung HS24
 
-## Introduction
+## Einführung
 
-This is a Renku project - basically a git repository with some
-bells and whistles. You'll find we have already created some
-useful things like `data` and `notebooks` directories and
-a `Dockerfile`.
+In diesem Projekt findest du alle Unterlagen für das Semester HS24 des Moduls Software-Entwicklung an der Berner Fachhochschule.
 
-## Working with the project
+## Inhaltsverzeichnis
 
-The simplest way to start your project is right from the Renku
-platform - just click on the `Sessions` tab and start a new session.
-This will start an interactive environment right in your browser.
+[Hier](./notebooks/Inhaltsverzeichnis.ipynb) findest du unser Inhaltsverzeichnis. 
 
-To work with the project anywhere outside the Renku platform,
-click the `Settings` tab where you will find the
-git repo URLs - use `git` to clone the project on whichever machine you want.
+## Arbeiten mit Renkulab
 
-### Changing interactive session dependencies
+Um den Einstieg ins Programmieren nicht mit Installieren und Konfigurieren von Software zu erschweren haben wir uns entschieden auf Renkulab zu setzen. 
 
-Initially we install a very minimal set of packages to keep the images small.
-However, you can add python and conda packages in `requirements.txt` and
-`environment.yml` to your heart's content. If you need more fine-grained
-control over your environment, please see [the documentation](https://renku.readthedocs.io/en/stable/topic-guides/customizing-sessions.html).
+## Repository forken
 
-## Project configuration
+Damit Renkulab **automatisch** deine Arbeiten speichern kann musst du einen **Fork** erstellen. Gehe dazu folgendermassen vor:
 
-Project options can be found in `.renku/renku.ini`. In this
-project there is currently only one option, which specifies
-the default type of environment to open, in this case `/lab` for
-JupyterLab. You may also choose `/tree` to get to the "classic" Jupyter
-interface.
+### Erstelle einen Account
 
-## Moving forward
+- Klicke auf **Login**:
 
-Once you feel at home with your project, we recommend that you replace
-this README file with your own project documentation! Happy data wrangling!
+<img src="https://i.imgur.com/mtUfgGi.png" width="100%">
+
+- Wähle SWITCH edu-ID:
+
+<img src="https://i.imgur.com/vjlwi2m.png" width="100%">
+
+### Erstelle einen Fork
+
+- Klicke auf **Fork**:
+
+<img src="https://i.imgur.com/LRAz18H.png" width="100%">
+
+- Wähle im Modal die Einstellung **Internal** und klicke auf **Fork Project**
+
+<img src="https://i.imgur.com/2uzr6ng.png" width="100%">
+
+> Der Vorteil von Internal ist, dass du nicht ausversehen eine Session startest ohne eingeloggt zu sein. Deine Änderungen können nur gespeichert und wiederhergestellt werden, falls du eingeloggt bist.
+
+- Wir empfehlen dir ein Bookmark zu erstellen damit du schnell und ohne Umwege auf deine Modul Resourcen zugreiffen kannst. 
+
+## Session starten
+
+Sobald du einen Fork erstellt hast, kannst du eine Session starten:
+
+<img src="https://i.imgur.com/6evyIqC.png" width="100%">
+
+> Stelle sicher, dass du **deinen** Fork startest, sonst sind deine Änderungen nicht vorhanden und können nicht gespeichert werden
