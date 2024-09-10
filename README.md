@@ -5,10 +5,6 @@
 
 In diesem Projekt findest du alle Unterlagen für das Semester HS24 des Moduls Software-Entwicklung an der Berner Fachhochschule.
 
-## Inhaltsverzeichnis
-
-[Hier](./notebooks/Inhaltsverzeichnis.ipynb) findest du unser Inhaltsverzeichnis. 
-
 ## Arbeiten mit Renkulab
 
 Um den Einstieg ins Programmieren nicht mit Installieren und Konfigurieren von Software zu erschweren haben wir uns entschieden auf Renkulab zu setzen. 
