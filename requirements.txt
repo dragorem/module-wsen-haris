@@ -1,6 +1,6 @@
 numpy==1.22.2
 matplotlib==3.5.1
-jupyterlab==3.2.1
+jupyterlab==4.2.5
 pandas==1.4.2
 scipy==1.8.1
 grundkurs_theme==1.1.0 
